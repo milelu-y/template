@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专家团队</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/professor.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+<!-- 顶部 -->
+<div class="about-head">
+    <!-- 最上面logo部分 -->
+    <div class="logo">
+        <div class="float-left logo-left">
+            <!-- 左边logo和文字 -->
+            <div class="logo-left-img"></div>
+        </div>
+        <div class="float-right logo-right">
+            <!-- 右边搜索和电话 -->
+            <div class="search float-left">
+    <form action="/search/searchKewWord.html">
+    <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+    <button class="search-icon" type="submit"></button>
+    </form>
+</div>            <div class="phone float-right">
+                <div class="phone-icon"></div>
+                <div class="phone-num">0731-88671588</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二层头部导航区 -->
+       <div class="head-bar">
+        <div class="app">
+            <div class="app">
+                <ul>
+             <li>
+            <a href=/about/index.html >关于我们</a>
+         </li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- h1 关于我们 -->
+    <div class="logo-h1 app">
+        <h1>关于
+            <span>我们</span>
+        </h1>
+        <div>AboutUS</div>
+    </div>
+
+    <!-- tab切换栏 -->
+    <div class="logo-tab app">
+        <ul>
+                    <li id="now-a">
+                       <a href=/about/index.html >公司介绍</a>
+                    </li>
+                    <li id="now-a">
+                       <a href=/org/index.html >组织架构</a>
+                    </li>
+                    <li id="now-a">
+                       <a href=/team/index.html >专家团队</a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+    	<!-- 当前位置 -->
+    <div class="current-position">
+        <div class="app">
+            <div class="about-icon"></div>
+
+            <div class="current-div">您当前的位置 :</div>
+            <div class="current-ul">
+                <ul>
+                    <li><a href="/">网站首页></a></li>
+                           <li><a href="/about/index.html">关于我们></a></li>
+                           <li><a href="/team/index.html">专家团队></a></li>
+                           <li><a href="/professor/index.html">国务院津贴教授</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+<!-- 主体内容区域 -->
+<div class="content app">
+    <div class="content-tab">
+        <ul>
+            <li>
+                <span><a href="javascript:;" class="tab-text">国务院津贴教授</a></span>
+                <div class="tab-bar"></div>
+            </li>
+
+            <li>
+                <span><a href="javascript:;">高级工程师</a></span>
+                <div></div>
+            </li>
+
+            <li>
+                <span><a href="javascript:;">省专家库专家</a></span>
+                <div></div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="content-ul">
+        <ul>
+        </ul>
+
+        <div class="snto_pagnavcon">
+          <a href="index.html">&lt;&lt;</a>
+          <a href="index.html"  id="snto_pagnavactive">1</a>
+          <a href="index.html">&gt;&gt;</a>
+        </div>
+  	</div>
+    <div class="content-ul none">
+        <ul>
+            <li>
+                <div class="content-img content-img">
+                    <img src="/static/content/2020/11/13/b56b2f37-b465-4988-b191-6bb8c268c563.png" alt="">
+                </div>
+                <div class="uname">测试</div>
+                <div class="info">测试
+                </div>
+                <div class="img-a">
+                    <a href="/engineer/20201113/511954742818111488.html">查看详情</a>
+                </div>
+            </li>
+        </ul>
+<div class="snto_pagnavcon">
+    <a href="index.html">&lt;&lt;</a>
+<a href="index.html"  id="snto_pagnavactive">1</a>
+<a href="index.html">&gt;&gt;</a>
+</div>    </div>
+    <div class="content-ul none">
+        <ul>
+            <li>
+                <div class="content-img content-img">
+                    <img src="/static/content/2020/11/30/fe760c22-131a-4d24-9c62-2200b43dd814.png" alt="">
+                </div>
+                <div class="uname">专家库</div>
+                <div class="info">专家库
+                </div>
+                <div class="img-a">
+                    <a href="/provincialExpert/20201130/518011129864126464.html">查看详情</a>
+                </div>
+            </li>
+        </ul>
+<div class="snto_pagnavcon">
+    <a href="index.html">&lt;&lt;</a>
+<a href="index.html"  id="snto_pagnavactive">1</a>
+<a href="index.html">&gt;&gt;</a>
+</div>    </div>
+
+</div>
+
+<!-- 页面底部 -->
+<include import('footer')/>
+</body>
+<script>
+    $(function() {
+        $('.content-tab ul li').click(function() {
+            $('.content-tab ul li span').children('a').removeClass()
+            $('.content-tab ul li').children('div').removeClass()
+            $(this).children('span').children('a').addClass('tab-text')
+            $(this).children('div').addClass('tab-bar')
+
+            // 这里做一个内容切换的效果   显示和隐藏
+            var liIndex = $(this).index()
+
+            $(".content-ul").hide()
+            $(".content-ul").eq(liIndex).show()
+        })
+    })
+</script>
+
+
+<script>
+    $(function() {
+        $('.logo-left-img').click(function() {
+            location.href = '/'
+        })
+    })
+</script>
+
+</html>

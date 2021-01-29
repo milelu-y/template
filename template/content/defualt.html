@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<#include "/fragment/header.html" />
+    <link rel="stylesheet" href="/assets/css/news-details.css">
+  <header>
+    <!-- 顶部 -->
+    <div class="about-head">
+        <!-- 最上面logo部分 -->
+        <div class="logo">
+            <div class="float-left logo-left">
+                <!-- 左边logo和文字 -->
+                <div class="logo-left-img"></div>
+            </div>
+            <div class="float-right logo-right">
+                <div class="search float-left">
+                    <form action="/search/searchKewWord.html">
+                        <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                        <button class="search-icon" type="submit"></button>
+                    </form>
+                </div>
+                <div class="phone float-right">
+                    <div class="phone-icon"></div>
+                    <div class="phone-num">0731-88671588</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二层头部导航区 -->
+        <div class="head-bar">
+            <div class="app">
+                <ul>
+                    <#include import('category')/>
+                </ul>
+            </div>
+        </div>
+
+        <!-- h1 关于我们 -->
+        <div class="logo-h1 app">
+            <h1>新闻中心</h1>
+        </div>
+    </div>
+</header>
+
+<body>
+<div class="current-position">
+    <div class="app1 app">
+        <div class="about-icon"></div>
+        <div class="current-div">您当前的位置 :</div>
+        <div class="current-ul">
+           <ul>
+                <li><a href="/index.html">网站首页/</a></li>
+            	 <@breadCrumb categoryId=categoryId  postfix='/'>
+                 		<#list categorys as category>
+                           <li><a href="${category.path!}">${category.name!}</a></li>
+                        </#list>
+            	 </@breadCrumb>
+        		<li><a href="javascript:;">/${title}</a></li>
+        	</ul>
+      </div>
+    </div>
+    <div class="news-content app">
+        <h1>${title!}</h1>
+        <div class="news-text">
+            <div class="text1">新闻导读 :
+                <sapn class="text2">
+                  ${description!}
+                </sapn>
+            </div>
+        </div>
+        <div class="news-time">
+            <div class="time">
+                <div class="left">发布时间 :</div>
+                <div class="right">${(publishDate?string('YYYY-MM-dd'))!'${.now?string("YYYY-MM-dd")}'}</div>
+            </div>
+            <div class="click-rate">
+                <div class="left">点击率 :</div>
+                <div class="right"><span id="clicks">0</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+      <!-- 新闻详情 -->
+<div class="news-content app mce-content-body">
+  	 ${text!}
+    <div class="content-span-border"></div>
+    <div class="content-next">
+        <@nextPrevious id=id categoryId=categoryId>
+        <#if previous??>
+        <div>上一篇：<a href='${previous.url!}'>${sub((previous.title)!,20,'..')}</a></div>
+        <#else>
+        <div>上一篇：没有啦~</div>
+        </#if>
+        <#if next??>
+        <div>下一篇：<a href='${next.url!}'>${sub((next.title)!,20,'..')}</a></div>
+        <#else>
+        <div>下一篇：没有啦~</div>
+        </#if>
+        </@nextPrevious>
+    </div>
+</div>
+      <!-- 最新更新 -->
+<div class="newest-content">
+
+    <div class="app">
+        <div class="text-div">最新更新</div>
+        <div class="text-img">
+            <ul>
+                <@cdata code=code order='publish_date desc' num=6>
+                <#list contents as content>
+                  <li>
+                      <img src="${content.cover.url!}" alt="">
+                      <div class="img-text">
+                          <a href="${content.url!}">
+                              ${sub((content.title)!,20,'..')}
+                          </a>
+                      </div>
+                  </li>
+                </#list>
+                </@cdata>
+            </ul>
+        </div>
+    </div>
+</div>
+      <#include import('footer')/>
+</body>
+</html>

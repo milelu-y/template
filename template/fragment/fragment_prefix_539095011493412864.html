@@ -1,0 +1,92 @@
+<div class="news-video app">
+    <div class="float-left news-box">
+        <div class="news-box-div">
+            <span class="float-left news-head">CITC新闻</span>
+            <div class="float-left blue-bar"></div>
+            <div class="float-left gray-bar"></div>
+            <button class="float-right news-etc-button"><a href="/news/index.html">更多 ></a></button>
+        </div>
+        <@cdata code='news'>
+        <#list contents as content>
+        <#if (content_index<2) >
+        <div class="news-span">
+            <div class="news-span-title"><a href="${content.url!}">${sub((content.title)!,25,'..')}</a></div>
+            <div>
+                    <span class="news-span-title-content">
+                        ${sub((content.title)!,100,'..')}
+                    </span>
+                <a href="${content.url!}" class="a">[详情]</a>
+            </div>
+        </div>
+        </#if>
+        <#if (content_index>1) >
+        <div class="news-info-bar">
+            <ul>
+                <li>
+                    <i></i>
+                    <span class="info-bar-span1"><a href="${content.url!}">
+                       ${sub((content.title)!,25,'..')}
+                    </a></span>
+                    <span class="info-bar-span2 float-right">${(publishDate?string('YYYY-MM-dd'))!'${.now?string("YYYY-MM-dd")}'}</span>
+                </li>
+            </ul>
+        </div>
+        </#if>
+        </#list>
+        </@cdata>
+    </div>
+
+
+    <div class="float-right video-box">
+        <div class="video-box-div">
+            <span class="float-left news-head">视频中心</span>
+            <div class="float-left blue-bar"></div>
+            <div class="float-left gray-bar"></div>
+            <button class="float-right news-etc-button"><a href="/video/index.html">更多 ></a></button>
+        </div>
+        <div class="video-box-div2">
+            <iframe width="100%" height="100%" class="ql-video" frameborder="0" allowfullscreen="true"
+                    src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></iframe>
+        </div>
+    </div>
+
+
+    <!-- 检验指南, 证书查询, 申请, 其他服务 -->
+    <div class="guide-serve app">
+        <ul>
+            <li class="guide-serve-li1">
+                <div class="guide-background">
+                    <img src="/assets/images/guide-background-img1.png" alt="" class="guide-background-img1">
+                    <div class="guide-div-text">
+                        <div class="guide-text1">认证<span>流程</span></div>
+                        <div class="guide-text2">Certification process ↗</div>
+                    </div>
+                </div>
+                <div class="color-line"></div>
+            </li>
+            <li class="guide-serve-li2">
+                <a href="/certificate/index.html">
+                    <div class="guide-background">
+                        <img src="/assets/images/guide-background-img2.png" alt="" class="guide-background-img2">
+                        <div class="guide-div-text">
+                            <div class="guide-text1">证书<span>查询</span></div>
+                            <div class="guide-text2">Certificate query ↗</div>
+                        </div>
+                    </div>
+                </a>
+                <div class="color-line"></div>
+            </li>
+            <li class="guide-serve-li3">
+                <div class="guide-background">
+                    <img src="/assets/images/guide-background-img3.png" alt="" class="guide-background-img3">
+                    <div class="guide-div-text">
+                        <div class="guide-text1">业务<span>咨询</span></div>
+                        <div class="guide-text2">Business consulting ↗</div>
+                    </div>
+                </div>
+                <div class="color-line"></div>
+            </li>
+        </ul>
+    </div>
+
+</div>

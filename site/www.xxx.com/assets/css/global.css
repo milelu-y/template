@@ -1,0 +1,88 @@
+html,
+body,
+.app {
+    /* height: 100%; */
+    padding: 0;
+    margin: 0;
+}
+html,
+body { min-width:1630px !important;}
+.app {
+    margin: 0 auto;
+    width: 1170px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+.about-head .logo-h1 h1 {
+  position: relative;
+  margin-bottom: 0;
+  font-size: 64px;
+  color: #fff;
+  text-shadow: 0 0 4px #696868;
+}
+input,
+button {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* 跳转链接添加样式 */
+
+.about-head .head-bar ul li a {
+    display: block;
+    width: 146px;
+    height: 68px;
+    color: #fff;
+}
+
+
+/* 当前位置的字体大小 */
+
+.current-position .app {
+    font-size: 14px !important;
+}
+
+
+/*
+a:hover {
+    color: blue;
+} */
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #fff;
+}
+
+.logo-left-img:hover {
+    cursor: pointer;
+}

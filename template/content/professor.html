@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<#include "/fragment/header.html" />
+<header>
+    <!-- 顶部 -->
+    <div class="about-head">
+        <!-- 最上面logo部分 -->
+        <div class="logo">
+            <div class="float-left logo-left">
+                <!-- 左边logo和文字 -->
+                <div class="logo-left-img"></div>
+            </div>
+            <div class="float-right logo-right">
+                <!-- 右边搜索和电话 -->
+              <div class="search float-left">
+                  <form action="/search/searchKewWord.html">
+                  <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                  <button class="search-icon" type="submit"></button>
+                  </form>
+              </div>
+              <div class="phone float-right">
+                    <div class="phone-icon"></div>
+                    <div class="phone-num">0731-88671588</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二层头部导航区 -->
+        <div class="head-bar">
+            <div class="app">
+               <#include import('category')/>
+          	</div>
+        </div>
+
+
+        <div class="logo-h1 app">
+            <h1>专家团队</h1>
+        </div>
+
+    </div>
+
+</header>
+<body>
+<!-- 当前位置 -->
+<div class="current-position">
+    <div class="app1 app">
+        <div class="about-icon"></div>
+        <div class="current-div">您当前的位置 :</div>
+        <div class="current-ul">
+            <ul>
+                <li><a href="/index.html">网站首页></a></li>
+            	 <@breadCrumb categoryId=categoryId  postfix='/'>
+                 		<#list categorys as category>
+                           <li><a href="${category.path!}">${category.name!}</a></li>
+                        </#list>
+            	 </@breadCrumb>
+        		<li><a href="javascript:;">/${title}</a></li>
+        	</ul>
+    </div>
+</div>
+<div class="news-content app">
+    <h1>${title!}</h1>
+    <div class="news-text">
+        <div class="text1">人物描述 :
+            <sapn class="text2">${description!}</sapn>
+        </div>
+    </div>
+    <div class="news-time">
+        <div class="time">
+            <div class="left">发布时间 : </div>
+            <div class="right">${(publishDate?string('YYYY-MM-dd'))!'${.now?string("YYYY-MM-dd")}'}</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 新闻详情 -->
+<div class="news-content app mce-content-body">
+   ${text!}
+</div>
+</div>
+
+
+<!-- 页面底部 -->
+<#include import('footer')/>
+</body>
+<script>
+    $(function () {
+        $('.logo-left-img').click(function () {
+            location.href = '/'
+        })
+    })
+</script>
+
+</html>

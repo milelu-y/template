@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<#include "/fragment/header.html" />
+<body>
+<!-- 顶部 -->
+<div class="about-head">
+    <!-- 最上面logo部分 -->
+    <div class="logo">
+        <div class="float-left logo-left">
+            <!-- 左边logo和文字 -->
+            <div class="logo-left-img"></div>
+        </div>
+        <div class="float-right logo-right">
+            <!-- 右边搜索和电话 -->
+            <div class="search float-left">
+                <input class="search-box" placeholder="请在此搜索关键字哟......" type="text">
+                <i class="search-icon"></i>
+            </div>
+            <div class="phone float-right">
+                <div class="phone-icon"></div>
+                <div class="phone-num">0731-88671588</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二层头部导航区 -->
+    <div class="head-bar">
+        <div class="app">
+            <#include import('category')/>
+        </div>
+    </div>
+
+    <!-- h1 证书查询 -->
+    <div class="logo-h1 app">
+        <h1>资质授权</h1>
+    </div>
+</div>
+<!-- 当前位置 -->
+<div class="current-position">
+    <div class="app1 app">
+        <div class="about-icon"></div>
+        <div class="current-div">您当前的位置 :</div>
+        <div class="current-ul">
+            <ul>
+                <li><a href="/">网站首页></a></li>
+                <@breadCrumb categoryId=categoryId postfix='/'>
+                <#list categorys as category>
+                <li><a href="${category.path!}">${category.name!}</a></li>
+            </#list>
+            </@breadCrumb>
+            </ul>
+        </div>
+    </div>
+    <div class="news-content app">
+        <h1>${title!}</h1>
+    </div>
+</div>
+
+<!-- 内容主体区域 -->
+<div class="content app">
+    <!-- 矿山在用设备检测查询 -->
+    <div class="company-profile" style="height:200px">
+        <div class="app">
+            <div class="profile-div">
+                <div class="profile-title">资质认证</div>
+                <div class="profile-title-border"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 证书 -->
+    <div class="content-img mce-content-body">
+        ${text!}
+    </div>
+</div>
+<!-- 页面底部 -->
+<#include import("footer") />
+
+</body>
+<script>
+    $(function () {
+        $('.logo-left-img').click(function () {
+            location.href = '/'
+        })
+    })
+</script>
+
+</html>

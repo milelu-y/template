@@ -1,0 +1,67 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们啊</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/about-us.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+<!-- 顶部 -->
+<div class="about-head">
+    <!-- 最上面logo部分 -->
+    <div class="logo">
+        <div class="float-left logo-left">
+            <!-- 左边logo和文字 -->
+            <div class="logo-left-img"></div>
+        </div>
+        <div class="float-right logo-right">
+            <!-- 右边搜索和电话 -->
+            <div class="search float-left">
+                <form action="/search/searchKewWord.html">
+                    <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                    <button class="search-icon" type="submit"></button>
+                </form>
+            </div>
+            <div class="phone float-right">
+                <div class="phone-icon"></div>
+                <div class="phone-num">0731-88671588</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二层头部导航区 -->
+    <div class="head-bar">
+        <div class="app">
+            <div class="app">
+                <#include import('category')/>
+            </div>
+        </div>
+    </div>
+
+    <!-- h1 关于我们 -->
+    <div class="logo-h1 app">
+        <h1>关于
+            <span>我们</span>
+        </h1>
+        <div>AboutUS</div>
+    </div>
+
+    <!-- tab切换栏 -->
+    <div class="logo-tab app">
+        <ul>
+   
+        <@navbar code=code>
+            <#if bars?? && (bars?size>0)>
+            <#list bars as bar>
+                <li>
+                   <a ${bar.onlyUrl ? string('href=${dt}${bar.remoteUrl!}','href=${bar.path!}')} >${bar.name!}</a>
+                    ${bar.children!}   	非必填	[]	子栏目集合	输出可以以此类推循环  bar.children as children 重复上诉
+                </li>
+           </#list>
+           </#if>
+        </@navbar>
+        </ul>
+    </div>
+</div>

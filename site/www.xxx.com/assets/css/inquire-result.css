@@ -1,0 +1,11 @@
+.content {
+  height: 1000px;
+}
+.content .content-img {
+  width: 506px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.content .content-img img {
+  width: 506px;
+}

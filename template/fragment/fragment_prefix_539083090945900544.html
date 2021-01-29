@@ -1,0 +1,16 @@
+   <!-- 轮播图的图片 -->
+        <div class="swiper-wrapper">
+          	<@fdata code='banner'> 
+              <#list datas as data>
+               <div class="swiper-slide">
+                  <img style="width: 100%;height: 100%" title="${data.title}" src="${data.cover.url}"/>
+               </div>
+              </#list>
+            </@fdata>
+        </div>
+ <!-- 分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>

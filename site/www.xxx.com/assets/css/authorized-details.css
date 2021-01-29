@@ -1,0 +1,41 @@
+.content {
+  height: 1000px;
+}
+.content .company-profile {
+  width: 100%;
+}
+.content .company-profile .app .profile-div {
+  position: relative;
+  height: 120px;
+}
+.content .company-profile .app .profile-div .profile-title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 576px;
+  padding-bottom: 10px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0064b4;
+  border-bottom: 5px solid #0064b4;
+  z-index: 10;
+}
+.content .company-profile .app .profile-div .profile-title-border {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  width: 1170px;
+  height: 1px;
+  background-color: #e6e6ee;
+  z-index: 1;
+}
+.content .content-img {
+  width: 506px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+.content .content-img img {
+  width: 506px;
+}

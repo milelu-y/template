@@ -1,0 +1,27 @@
+<!-- 证书墙 -->
+<div class="certificate-wall">
+  	<@cdata code='authorization' num=4 order='create_time desc'>
+    <div class="app">
+        <div class="technical-head">
+            <div class="float-left gray-bar"></div>
+            <div class="float-left blue-bar"></div>
+            <span class="technical-head-span1">资质</span>
+            <span class="technical-head-span2">授权</span>
+            <div class="float-right gray-bar"></div>
+            <div class="float-right blue-bar"></div>
+        </div>
+        <ul>
+          	<#list contents as content>
+            <li class="certificate-wall-li1">
+                <img src="${content.cover.url!}">
+                <div><a href="${content.url!}">${content.title!}</a></div>
+            </li>
+            </#list>
+        </ul>
+    </div>
+    <!-- 底部button按钮 -->
+    <div class="certificate-wall-button">
+        <div class="snto_productbtn"><a href="/authorization/index.html">更多资质授权</a></div>
+    </div>
+    </@cdata>
+</div>

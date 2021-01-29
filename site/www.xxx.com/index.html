@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--头部-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>矿山研究院</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/index1.css">
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/css/news.css">
+    <link rel="stylesheet" href="/assets/css/news-details.css">
+    <link rel="stylesheet" href="/assets/css/about-us.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+    <script src="/assets/js/jquery.page.js"></script>
+</head>
+<header>
+    <div class="swiper-container">
+        <!-- 最上面logo部分 -->
+        <div class="logo">
+            <div class="float-left logo-left">
+                <!-- 左边logo和文字 -->
+                <div class="logo-left-img"></div>
+            </div>
+            <div class="float-right logo-right">
+                <!-- 右边搜索和电话 -->
+                <div class="search float-left">
+                    <form action="/search/searchKewWord.html">
+                        <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                        <button class="search-icon" type="submit"></button>
+                    </form>
+                </div>
+                <div class="phone float-right">
+                    <div class="phone-icon"></div>
+                    <div class="phone-num">0731-88671588</div>
+                </div>
+            </div>
+        </div>
+      <!-- 第二层头部导航区 -->
+    <div class="head-bar">
+        <div class="app">
+            <div class="app">
+                  	<!--导入分类栏目-->
+                    <ul>
+             <li>
+            <a href=/info/index.html >关于我们</a>
+         </li>
+          <li>
+            <a href=/productSecurity/index.html >检测检验</a>
+         </li>
+          <li>
+            <a href=/securityTarin/index.html >技术培训</a>
+         </li>
+          <li>
+            <a href=/programme/index.html >技术服务</a>
+         </li>
+          <li>
+            <a href=/authorization/index.html >资质授权</a>
+         </li>
+          <li>
+            <a href=/news/index.html >新闻中心</a>
+         </li>
+          <li>
+            <a href=/video/index.html >视频中心</a>
+         </li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+      <!--banner图-->
+   <!-- 轮播图的图片 -->
+        <div class="swiper-wrapper">
+          	               <div class="swiper-slide">
+                  <img style="width: 100%;height: 100%" title="banner1" src="http://localhost:7777/profile/upload/2021/01/27/c49a73ea-31d5-4055-ade2-c820e9807398.png"/>
+               </div>
+               <div class="swiper-slide">
+                  <img style="width: 100%;height: 100%" title="banner2" src="http://localhost:7777/profile/upload/2021/01/27/9e4631b1-1836-46fc-bc8e-64a4e66ff1d5.jpg"/>
+               </div>
+        </div>
+ <!-- 分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div></header>  <!--技术服务-->
+<!-- 技术服务 -->
+<div class="technical-services app">
+    <!-- 标题 -->
+    <div class="technical-head">
+        <div class="float-left gray-bar"></div>
+        <div class="float-left blue-bar"></div>
+        <span class="technical-head-span">技术</span>
+        <span>服务</span>
+        <div class="float-right gray-bar"></div>
+        <div class="float-right blue-bar"></div>
+    </div>
+
+    <!-- 四张图 -->
+    <div class="img">
+        <ul>
+            <li>
+                <div class="box-img">
+                    <img src="/assets/images/technicalImg1.png">
+                </div>
+                <div class="line">
+                    <div class="line-box1"></div>
+                    <div class="line-box2"></div>
+                    <div class="line-box3"></div>
+                </div>
+                <div class="text">专业第三方检测机构</div>
+            </li>
+            <li>
+                <div class="box-img">
+                    <img src="/assets/images/technicalImg2.png">
+                </div>
+                <div class="line">
+                    <div class="line-box1"></div>
+                    <div class="line-box2"></div>
+                    <div class="line-box3"></div>
+                </div>
+                <div class="text">30余年检测认证经验</div>
+            </li>
+            <li>
+                <div class="box-img">
+                    <img src="/assets/images/technicalImg3.png">
+                </div>
+                <div class="line">
+                    <div class="line-box1"></div>
+                    <div class="line-box2"></div>
+                    <div class="line-box3"></div>
+                </div>
+                <div class="text">多家权威机构认可</div>
+            </li>
+            <li>
+                <div class="box-img">
+                    <img src="/assets/images/technicalImg4.png">
+                </div>
+                <div class="line">
+                    <div class="line-box1"></div>
+                    <div class="line-box2"></div>
+                    <div class="line-box3"></div>
+                </div>
+                <div class="text">全程一对一服务</div>
+            </li>
+        </ul>
+    </div>
+    <!-- 内容区 -->
+    <div class="content">
+        <!-- 左边的图片 -->
+        <div class="content-img float-left" id="technical-img">
+            <img src="/static/content/2020/12/28/48e4ae2e-fc8a-40b9-8290-8e30d1b4a120.png" alt="">
+            <img class="none" src="/static/content/2020/12/02/6a44f0d6-f143-4215-8b35-ab35791a9d9a.png" alt="">
+        </div>
+        <!-- 右边的tab栏 -->
+        <div class="content-text float-right">
+            <div class="text-up">
+                <h1>矿用产品安全标志认证</h1>
+                <ul>
+                    主要承担矿机企业安全标志认证业务技术咨询、技术审查及检测检验
+                </ul>
+            </div>
+            <div class="text-up">
+                <h1>测试</h1>
+                <ul>
+                    测试
+                </ul>
+            </div>
+            <div class="text-ul">
+                <ul id="technical-tab">
+                    <li class="li-hover"><a href="/Inspection/20201228/518870827043651584.html">矿用产品安全标志认证</a></li>
+                    <li><a href="/Inspection/20201208/518870938100432896.html">矿山在用设备检测</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  <!--新闻-->
+<div class="news-video app">
+    <div class="float-left news-box">
+        <div class="news-box-div">
+            <span class="float-left news-head">CITC新闻</span>
+            <div class="float-left blue-bar"></div>
+            <div class="float-left gray-bar"></div>
+            <button class="float-right news-etc-button"><a href="/news/index.html">更多 ></a></button>
+        </div>
+                <div class="news-span">
+            <div class="news-span-title"><a href="/news/20210128/8f5b141b-4496-492e-970f-9358ba09fcf6.html">干式制动器，还需要多少矿工生命为你买单!</a></div>
+            <div>
+                    <span class="news-span-title-content">
+                        干式制动器，还需要多少矿工生命为你买单!
+                    </span>
+                <a href="/news/20210128/8f5b141b-4496-492e-970f-9358ba09fcf6.html" class="a">[详情]</a>
+            </div>
+        </div>
+        <div class="news-span">
+            <div class="news-span-title"><a href="/news/20210128/34f287cf-e1ea-4476-b825-cfb580242f99.html">我单位应邀参加2020年度全国防爆电气设备标准化技..</a></div>
+            <div>
+                    <span class="news-span-title-content">
+                        我单位应邀参加2020年度全国防爆电气设备标准化技术委员会标准审查会
+                    </span>
+                <a href="/news/20210128/34f287cf-e1ea-4476-b825-cfb580242f99.html" class="a">[详情]</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="float-right video-box">
+        <div class="video-box-div">
+            <span class="float-left news-head">视频中心</span>
+            <div class="float-left blue-bar"></div>
+            <div class="float-left gray-bar"></div>
+            <button class="float-right news-etc-button"><a href="/video/index.html">更多 ></a></button>
+        </div>
+        <div class="video-box-div2">
+            <iframe width="100%" height="100%" class="ql-video" frameborder="0" allowfullscreen="true"
+                    src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></iframe>
+        </div>
+    </div>
+
+
+    <!-- 检验指南, 证书查询, 申请, 其他服务 -->
+    <div class="guide-serve app">
+        <ul>
+            <li class="guide-serve-li1">
+                <div class="guide-background">
+                    <img src="/assets/images/guide-background-img1.png" alt="" class="guide-background-img1">
+                    <div class="guide-div-text">
+                        <div class="guide-text1">认证<span>流程</span></div>
+                        <div class="guide-text2">Certification process ↗</div>
+                    </div>
+                </div>
+                <div class="color-line"></div>
+            </li>
+            <li class="guide-serve-li2">
+                <a href="/certificate/index.html">
+                    <div class="guide-background">
+                        <img src="/assets/images/guide-background-img2.png" alt="" class="guide-background-img2">
+                        <div class="guide-div-text">
+                            <div class="guide-text1">证书<span>查询</span></div>
+                            <div class="guide-text2">Certificate query ↗</div>
+                        </div>
+                    </div>
+                </a>
+                <div class="color-line"></div>
+            </li>
+            <li class="guide-serve-li3">
+                <div class="guide-background">
+                    <img src="/assets/images/guide-background-img3.png" alt="" class="guide-background-img3">
+                    <div class="guide-div-text">
+                        <div class="guide-text1">业务<span>咨询</span></div>
+                        <div class="guide-text2">Business consulting ↗</div>
+                    </div>
+                </div>
+                <div class="color-line"></div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+  <!--证书墙-->
+<!-- 证书墙 -->
+<div class="certificate-wall">
+  	    <div class="app">
+        <div class="technical-head">
+            <div class="float-left gray-bar"></div>
+            <div class="float-left blue-bar"></div>
+            <span class="technical-head-span1">资质</span>
+            <span class="technical-head-span2">授权</span>
+            <div class="float-right gray-bar"></div>
+            <div class="float-right blue-bar"></div>
+        </div>
+        <ul>
+            <li class="certificate-wall-li1">
+                <img src="http://localhost:7777/profile/upload/2021/01/29/1df1c3c1-9ce8-4db2-afcf-ac17bfd0e2bc.png">
+                <div><a href="/authorization/20210129/539837121209303040.html">资质认证</a></div>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部button按钮 -->
+    <div class="certificate-wall-button">
+        <div class="snto_productbtn"><a href="/authorization/index.html">更多资质授权</a></div>
+    </div>
+</div>  <!--合作伙伴-->
+<!-- 合作伙伴 -->
+<div class="partner app">
+    <div class="technical-head">
+        <div class="float-left gray-bar"></div>
+        <div class="float-left blue-bar"></div>
+        <span class="technical-head-span">合作</span>
+        <span>伙伴</span>
+        <div class="float-right gray-bar"></div>
+        <div class="float-right blue-bar"></div>
+    </div>
+    <div class="partner-div">
+      	            <div class="float-left partner-img">
+                <img title="中国石油" src="http://localhost:7777/profile/upload/2021/01/27/a8932d1d-94db-4d66-9842-6bfe6fa64b85.png">
+            </div>
+            <div class="float-left partner-img">
+                <img title="中国石化" src="http://localhost:7777/profile/upload/2021/01/29/a11d833a-8ba8-4564-ad56-4756830df747.png">
+            </div>
+    </div>
+</div>
+  <!-- 关于CITC -->
+  <div class="building">
+      <div class="building-content app">
+          <div>关于CITC</div>
+          <div class="building-div">国家安全生产长沙矿山机电检测检验中心</div>
+          <div class="building-content-text">本“中心”成立于 1986 年。目前本“中心”具有国家级中心授权，国家级、省级和行业资质 认定及CNAS
+              实验室认可，计量授权。检测范围覆盖提升运输设备、通风设备、排水设备、压 风设备、采掘设备、支护设备、非金属制品、电气防爆、电器、电机、电池、仪器仪表、通讯
+              设备、监测监控设备、救生器材、无损检测、材料与力学分析、环境适应性分析等......
+          </div>
+          <button class="building-button">查看详情</button>
+          <div class="building-div1">
+              <div class="float-left building-div1-left">
+                  <img src="/assets/images/building-son1.png" alt="" class="building-left-img">
+              </div>
+              <div class="float-right building-div1-right">
+                  <div class="float-left building-right building-div1-right1">
+                      <span class="building-right-span">安标认证</span>
+                      <img src="/assets/images/building-son2.png" alt="">
+                  </div>
+                  <div class="float-left building-right building-div1-right2">
+                      <span class="building-right-span">CCC产品认证</span>
+                      <img src="/assets/images/building-son3.png" alt="">
+                  </div>
+                  <div class="float-left building-div1-right3">
+                      <img src="/assets/images/building-son4.png" alt="" class="building-jia-img">
+                  </div>
+                  <div class="float-left building-right building-div1-right4">
+                      <span class="building-right-span">国际合作</span>
+                      <img src="/assets/images/building-son5.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- 页面底部 -->
+<div class="footer">
+    <div>
+        <div class="head-bar app footer-bar">
+             <ul>
+             <li>
+            <a href=/info/index.html >关于我们</a>
+         </li>
+          <li>
+            <a href=/productSecurity/index.html >检测检验</a>
+         </li>
+          <li>
+            <a href=/securityTarin/index.html >技术培训</a>
+         </li>
+          <li>
+            <a href=/programme/index.html >技术服务</a>
+         </li>
+          <li>
+            <a href=/authorization/index.html >资质授权</a>
+         </li>
+          <li>
+            <a href=/news/index.html >新闻中心</a>
+         </li>
+          <li>
+            <a href=/video/index.html >视频中心</a>
+         </li>
+</ul>
+
+
+        </div>
+    </div>
+    <div class="footer-div">
+        <div class="app">
+            <div class="footer-logo float-left"></div>
+            <div class="erweima float-right"></div>
+            <div class="footer-content footer-content1">0731-88671588</div>
+            <div class="footer-content footer-content2">中国 ● 湖南 ● 湖南省长沙市岳麓区天马路121号</div>
+            <div class="footer-content footer-content3">
+                <div class="footer-wx">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-xl">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-qq">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-qqkj">
+                    <a href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="footer-content footer-content4">版权所有:国家安全生产长沙矿山机电检测检验中心 湘ICP备14004059号-2 公安备案号 43010402000660
+            </div>
+        </div>
+    </div>
+</div><body>
+</body>
+  <script>
+    //  轮播图
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 鼠标样式
+        grabCursor: false,
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        //自动切换
+        autoplay: {
+            delay: 1700, //自动切换时间；
+
+            //与loop有关，设置为true，loop失效
+            stopOnLastSlide: false,
+
+            //用户操作之后，是否禁止自动切换（默认true禁止/设置false允许）
+            disableOnInteraction: false,
+        },
+    })
+</script>
+  <script>
+    $(function () {
+        var liIndex = $(this).index()
+
+        $(".text-up").hide()
+        $(".text-up").eq(0).show()
+    });
+    $(function () {
+
+        // 关于CIIT的button按钮 和 下面一点的加号图片
+        $('.building-button').click(function () {
+            location.href = '/about/index.html'
+        })
+        $('.building-div1-right3').click(function () {
+            location.href = '/about/index.html'
+        })
+        // 这个是技术服务的切换
+        $('#technical-tab li').hover(function () {
+
+            $('#technical-tab li').removeClass()
+            $(this).addClass('li-hover')
+            $('#technical-img img').addClass('none')
+            let imgIndex = $(this).index() + 1
+            $('#technical-img img:nth-child(' + imgIndex + ')').removeClass()
+            var liIndex = $(this).index()
+
+            $(".text-up").hide()
+            $(".text-up").eq(liIndex).show()
+        })
+    })
+</script>
+</html>

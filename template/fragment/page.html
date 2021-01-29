@@ -1,0 +1,25 @@
+<#if page && totalPage gt 1>
+<div class="snto_pagnavcon">
+  <a href="${frist!}">首页</a>
+     <#list 1..totalPage as i> 
+        <#if pageNo-5 lte 0>
+            <#assign startIndex = 1> 
+        <#else>
+            <#assign startIndex = pageNo -5 > 
+        </#if>
+            <#assign endIndex = startIndex+10> 
+              <#if i gte startIndex && i lt endIndex>
+                 <#if i == 1>
+                   <a ${(pageNo-1 ==i)?string('id="snto_pagnavactive"','')} href="${pathPrefix!}.html">${i}</a>
+                 <#else>
+                   <a ${(pageNo-1 ==i)?string('id="snto_pagnavactive"','')} href="${pathPrefix!}_${i}.html">${i}</a>
+                 </#if>  
+              </#if>  
+       </#list>
+              <#if hasNext>
+                   <a pageNo lte totalPage href='/${pathPrefix!}_${pageNo}.html'>下一页</a>
+              </#if>  
+              <a ${(totalPage gt 1)?string('href="${pathPrefix!}_${totalPage!}.html"','href="${pathPrefix!}.html"')}>末页</a>
+</div>
+</#if>  
+                     

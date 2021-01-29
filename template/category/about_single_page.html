@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--头部-->
+<#include "/fragment/header.html" />
+<body>
+<!-- 顶部 -->
+<div class="about-head" style="background: url(/assets/images/about-head-bg.png) no-repeat">
+    <!-- 最上面logo部分 -->
+    <div class="logo">
+        <div class="float-left logo-left">
+            <!-- 左边logo和文字 -->
+            <div class="logo-left-img"></div>
+        </div>
+        <div class="float-right logo-right">
+            <!-- 右边搜索和电话 -->
+            <div class="search float-left">
+                <form action="/search/searchKewWord.html">
+                    <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                    <button class="search-icon" type="submit"></button>
+                </form>
+            </div>
+            <div class="phone float-right">
+                <div class="phone-icon"></div>
+                <div class="phone-num">0731-88671588</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二层头部导航区 -->
+    <div class="head-bar">
+        <div class="app">
+            <div class="app">
+                <#include import('category')/>
+            </div>
+        </div>
+    </div>
+
+    <!-- h1 关于我们 -->
+    <div class="logo-h1 app">
+        <h1>关于我们</h1>
+    </div>
+
+    <!-- tab切换栏 -->
+    <div class="logo-tab app">
+        <ul>
+   		 <@category code='about'>
+                  <#list childs as children>
+                    <li <#if children.id==id>style="background-color: #40a0dc"</#if>>
+                       <a ${children.onlyUrl ? string('href=/${children.remoteUrl!}','href=${children.path!}')} >${children.name!}</a>
+                    </li>
+                  </#list>
+         </@category>
+        </ul>
+    </div>
+</div>
+    	<!-- 当前位置 -->
+    <div class="current-position">
+        <div class="app">
+            <div class="about-icon"></div>
+
+            <div class="current-div">您当前的位置 :</div>
+            <div class="current-ul">
+                <ul>
+                    <li><a href="/">网站首页></a></li>
+                    <@breadCrumb categoryId=id postfix='>'>
+                 		<#list categorys as category>
+                           <li><a href="${category.path!}">${category.name!}</a></li>
+                        </#list>
+            		</@breadCrumb>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mce-content-body" style="width: 71%;margin: auto;color: #333333">
+        ${content!}
+    </div>
+
+<!-- 页面底部 -->
+<#include import('footer')/>
+</body>
+<script>
+    $(function () {
+        $('#dates li a').click(function () {
+            $('#dates li a').removeClass()
+            $(this).addClass('dates-a')
+        })
+    })
+</script>
+<script>
+    $(function () {
+        $('.logo-left-img').click(function () {
+            location.href = '/'
+        })
+    })
+</script>
+
+<!-- 这个是tab切换的js -->
+<script>
+    $(function () {
+        $('#dates li').click(function () {
+            // console.log($(this).index());
+            $('.development-content').hide()
+            let key = $(this).index() + 1
+            $('#' + key + '').show()
+        })
+    })
+</script>
+
+</html>
