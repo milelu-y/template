@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防爆合格证查询</title>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/inquire-details.css">
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+<!-- 顶部 -->
+<div class="about-head">
+    <!-- 最上面logo部分 -->
+    <div class="logo">
+        <div class="float-left logo-left">
+            <!-- 左边logo和文字 -->
+            <div class="logo-left-img"></div>
+        </div>
+        <div class="float-right logo-right">
+            <!-- 右边搜索和电话 -->
+            <div class="search float-left">
+                <form action="/search/searchKewWord.html">
+                    <input class="search-box" name="keyword" placeholder="请在此搜索关键字哟......" type="text">
+                    <button class="search-icon" type="submit"></button>
+                </form>
+            </div>
+            <div class="phone float-right">
+                <div class="phone-icon"></div>
+                <div class="phone-num">0731-88671588</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 第二层头部导航区 -->
+    <div class="head-bar">
+        <div class="app">
+            <ul>
+                <li><a href="/">中心首页</a></li>
+                <li><a href="/about/index.html">关于我们</a></li>
+                <li><a href="/meian">检测检验</a></li>
+                <li><a href="/explosion">技术服务</a></li>
+                <li><a href="/testSkill">技术培训</a></li>
+                <li><a href="/certificate/index.html">证书查询</a></li>
+                <li><a href="/qualification/index.html">资质授权</a></li>
+                <li><a href="/news/index.html">新闻中心</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- h1 证书查询 -->
+    <div class="logo-h1 app">
+        <h1>证书
+            <span>查询</span>
+        </h1>
+    </div>
+</div>
+
+<!-- 当前位置 -->
+<div class="current-position">
+    <div class="app">
+        <div class="about-icon"></div>
+        <div class="current-div">您当前的位置 :</div>
+        <div class="current-ul">
+            <ul>
+                <li><a href="/">网站首页</a></li>
+                <span>&gt;</span>
+                <li><a href="/certificate/index.html">证书查询</a></li>
+                <span>&gt;</span>
+                <li><a href="javascript:;">证书查询详情</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 内容主体区域 -->
+<div class="content app">
+    <!-- 矿山在用设备检测查询 -->
+    <div class="company-profile">
+        <div class="app">
+            <div class="profile-div">
+                <div class="profile-title">防爆合格证查询</div>
+                <div class="profile-title-border"></div>
+            </div>
+        </div>
+    </div>
+
+    <form id="form" action="explosionCertificateResultSet.html">
+        <!-- 报告编号 -->
+        <div class="dropdown">
+            <div class="content-div">证书编号</div>
+            <input type="text" class="input4" name="certificateNo">
+        </div>
+        <div class="dropdown">
+            <div class="content-div">企业名称</div>
+            <input type="text" class="input4" name="productionUnit">
+        </div>
+        <div class="dropdown">
+            <div class="content-div">产品名称</div>
+            <input type="text" class="input4" name="productName">
+        </div>
+
+
+        <!-- 提交按钮 -->
+        <div class="button">
+            <button typt="submit" style="padding-top: 5%" class="btn">查询</button>
+        </div>
+    </form>
+</div>
+
+<!-- 页面底部 -->
+<div class="footer">
+    <div>
+        <div class="head-bar app footer-bar">
+            <ul>
+                <li><a href="/">中心首页</a></li>
+                <li><a href="/about/index.html">关于我们</a></li>
+                <li><a href="/meian">检测检验</a></li>
+                <li><a href="/explosion">技术服务</a></li>
+                <li><a href="/testSkill">技术培训</a></li>
+                <li><a href="/certificate/index.html">证书查询</a></li>
+                <li><a href="/qualification/index.html">资质授权</a></li>
+                <li><a href="/news/index.html">新闻中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-div">
+        <div class="app">
+            <div class="footer-logo float-left"></div>
+            <div class="erweima float-right"></div>
+            <div class="footer-content footer-content1">0731-88671588</div>
+            <div class="footer-content footer-content2">中国 ● 湖南 ● 湖南省长沙市岳麓区天马路121号</div>
+            <div class="footer-content footer-content3">
+                <div class="footer-wx">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-xl">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-qq">
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="footer-qqkj">
+                    <a href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="footer-content footer-content4">版权所有:国家安全生产长沙矿山机电检测检验中心 湘ICP备14004059号-2 公安备案号 43010402000660
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.logo-left-img').click(function () {
+            location.href = '/'
+        })
+    })
+</script>
+<style>
+    .btn {
+        background-color: transparent;
+        border-style: none;
+    }
+</style>
+</body>
+</html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <#include "/fragment/header.html" />
+<link rel="stylesheet" href="/assets/css/inquire.css">
 <body>
 <!-- 顶部 -->
-<div class="about-head" style="background: url(/assets/images/certificate_bg.jpg) no-repeat;">
+<div class="about-head" style="background: url(/assets/images/inquire-bg.png) no-repeat;">
     <!-- 最上面logo部分 -->
     <div class="logo">
         <div class="float-left logo-left">
@@ -29,25 +29,13 @@
     <!-- 第二层头部导航区 -->
     <div class="head-bar">
         <div class="app">
-           <#include import('category') />
+            <#include import('category') />
         </div>
     </div>
 
+    <!-- h1 证书查询 -->
     <div class="logo-h1 app">
-        <h1>${parentName!}</h1>
-    </div>
-
-    <!-- tab切换栏 -->
-    <div class="logo-tab app">
-        <ul>
-            <@category code='train'>
-            <#list childs as children>
-            <li <#if children.id==id>style="background-color: #40a0dc"</#if>>
-            <a ${children.onlyUrl ? string('href=/${children.remoteUrl!}','href=${children.path!}')} >${children.name!}</a>
-            </li>
-            </#list>
-            </@category>
-        </ul>
+        <h1>证书查询</h1>
     </div>
 </div>
 
@@ -57,7 +45,8 @@
         <div class="about-icon"></div>
         <div class="current-div">您当前的位置 :</div>
         <div class="current-ul">
-            <ul><li><a href="/">网站首页></a></li>
+            <ul>
+                <li><a href="/">网站首页></a></li>
                 <@breadCrumb categoryId=id postfix='>'>
                 <#list categorys as category>
                 <li><a href="${category.path!}">${category.name!}</a></li>
@@ -68,18 +57,36 @@
     </div>
 </div>
 
-<!-- 主体区域 -->
-<div class="mce-content-body" style="width: 71%;margin: auto;color: #333333">
-    ${content!}
+<!-- 主体内容区 -->
+<div class="content app">
+    <ul>
+        <li>
+            <span>防爆合格证</span>
+            <div>
+                <a target="_blank" href="explosionCertificateForm.html">立即查询</a>
+            </div>
+        </li>
+        <li>
+            <span>矿山再用设备检测</span>
+            <div>
+                <a target="_blank" href="deviceDetectionForm.html">立即查询</a>
+            </div>
+        </li>
+        <li>
+            <span>矿用合格证</span>
+            <div>
+                <a target="_blank" href="miningCertificatesForm.html">立即查询</a>
+            </div>
+        </li>
+    </ul>
 </div>
 
-
-<!-- 页面底部 -->
 <#include import('footer') />
+
 </body>
 <script>
-    $(function () {
-        $('.logo-left-img').click(function () {
+    $(function() {
+        $('.logo-left-img').click(function() {
             location.href = '/'
         })
     })
